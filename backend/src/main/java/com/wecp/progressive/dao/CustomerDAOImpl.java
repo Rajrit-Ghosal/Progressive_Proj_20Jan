@@ -176,17 +176,25 @@ public class CustomerDAOImpl implements CustomerDAO {
     // }
 
     private List<Customers> customers;
-    private List<CustomerAccountInfo> accountInfos;x
+    private List<CustomerAccountInfo> accountInfos;
 
-    public CustomerDAOImpl() {
+    CustomerDAOImpl() {
         this.customers = new ArrayList<>();
+        accountInfos=new ArrayList<>();
     }
 
     @Override
     public int addCustomer(Customers customer) {
+        if(customers.contains(customer))
+        {
+            return 0;
+        }
+        else{
         customers.add(customer);
+        }
+
         Collections.sort(customers); // Sort by name after adding
-        return customer.getCustomer_id();
+        return 1;
     }
 
     @Override
@@ -212,7 +220,11 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public void deleteCustomer(int customerId) {
-        customers.removeIf(customer -> customer.getCustomer_id() == customerId);
+        ListIterator<Customers> lst=customers.listIterator();
+        while(lst.hasNext())
+        {
+            
+        }
     }
 
     @Override

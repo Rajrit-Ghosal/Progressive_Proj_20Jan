@@ -10,7 +10,9 @@ public class Customers implements Comparable<Customers>{
     private String password;
     private String role;
 
-    public Customers(){}
+    public Customers(){
+        
+    }
 
     
 
