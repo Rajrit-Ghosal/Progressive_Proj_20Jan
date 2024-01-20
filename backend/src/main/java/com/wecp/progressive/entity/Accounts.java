@@ -7,6 +7,7 @@ public class Accounts implements Comparable<Accounts>{
     private int account_id;
     private int customer_id;
     private double balance;
+    System.out.println("Commited");
     public Accounts() {
     }
     public Accounts(int account_id, int customer_id, double balance) {
