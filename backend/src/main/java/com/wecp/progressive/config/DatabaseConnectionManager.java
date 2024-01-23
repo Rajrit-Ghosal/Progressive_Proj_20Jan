@@ -1,8 +1,4 @@
 package com.wecp.progressive.config;
-<<<<<<< HEAD
-
-public class DatabaseConnectionManager {
-=======
 import java.util.*;
 
 import javax.management.RuntimeErrorException;
@@ -37,6 +33,5 @@ public class DatabaseConnectionManager {
         return DriverManager.getConnection(url,user,password);
     }
    
->>>>>>> 8b7fdd6bb3e20280a92e6bcbce26f4bebc1c8b16
 
 }

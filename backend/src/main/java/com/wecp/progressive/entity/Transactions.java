@@ -1,10 +1,4 @@
 package com.wecp.progressive.entity;
-<<<<<<< HEAD
-import java.util.Date;
-
-
-public class Transactions {
-=======
 import java.sql.Date;
 
 
@@ -76,7 +70,6 @@ public class Transactions {
 
     
 
->>>>>>> 8b7fdd6bb3e20280a92e6bcbce26f4bebc1c8b16
 
 
 }

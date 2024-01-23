@@ -1,9 +1,4 @@
 package com.wecp.progressive.dao;
-<<<<<<< HEAD
-
-public class AccountDAOImpl {
-
-=======
 import java.util.*;
 
 import com.wecp.progressive.config.DatabaseConnectionManager;
@@ -14,27 +9,27 @@ import java.sql.*;
 
 public class AccountDAOImpl implements AccountDAO{
 
-    // private Connection con;
-    ArrayList<Accounts> accountsList;
-    public AccountDAOImpl(){
-        // try{
-        //     con=DatabaseConnectionManager.getConnection();
-        // }catch(SQLException e)
-        // {
-        //     e.printStackTrace();
-        // }
-        accountsList = new ArrayList<>();
-    }
+    //private Connection con;
+     ArrayList<Accounts> accountsList;
+    // public AccountDAOImpl(){
+    //     // try{
+    //     //     con=DatabaseConnectionManager.getConnection();
+    //     // }catch(SQLException e)
+    //     // {
+    //     //     e.printStackTrace();
+    //     // }
+    //    accountsList = new ArrayList<>();
+    // }
 
     public int addAccount(Accounts accounts)
     {
 
-        if(accountsList.contains(accounts)){
-            return 0;
-        }
+        // if(accountsList.contains(accounts)){
+        //     return 0;
+        // }
        
-            accountsList.add(accounts);
-            return 1;
+        //     accountsList.add(accounts);
+            return -1;
         
         // String sql="insert into accounts (customer_id,balance) values (?,?)";
         // int count=0;
@@ -63,18 +58,18 @@ public class AccountDAOImpl implements AccountDAO{
 
 
     public Accounts getAccountById(int accountId){ 
-        Accounts a1 = new Accounts();
-        for (Accounts element : accountsList) {
-            if (element.getAccount_id() == accountId) {
-                a1 = element;
-            } else {
-                a1 = null;
-            }
+        // Accounts a1 = new Accounts();
+        // for (Accounts element : accountsList) {
+        //     if (element.getAccount_id() == accountId) {
+        //         a1 = element;
+        //     } else {
+        //         a1 = null;
+        //     }
             
-        }
-        return a1;
+        // }
+        return null;
         
-        //Problem 11
+       
         // String sql="select * from accounts where account_id=?";
         // try(PreparedStatement pst=con.prepareStatement(sql)){
         //     pst.setInt(1,accountId);
@@ -89,26 +84,25 @@ public class AccountDAOImpl implements AccountDAO{
         //         return ac;
 
         //     }
-        //     else{
-        //         throw new AccountNotFoundException("ACCOUNT with ID:"+accountId+"not found!!");
-        //     }
+            
 
         // }
         // catch(SQLException e)
         // {
         //     e.printStackTrace();
-        //     return null;
         // }
+        
+        // return null;
     }
 
     public void updateAccount(Accounts accounts){
 
-        for (Accounts element : accountsList) {
-            if(accounts.getAccount_id() == element.getAccount_id()){
-                element.setBalance(accounts.getBalance());
-                element.setCustomer_id(accounts.getCustomer_id());
-            }
-        }
+        // for (Accounts element : accountsList) {
+        //     if(accounts.getAccount_id() == element.getAccount_id()){
+        //         element.setBalance(accounts.getBalance());
+        //         element.setCustomer_id(accounts.getCustomer_id());
+        //     }
+        // }
 
         // String sql="update accounts set customer_id=?,balance=? where account_id=? ";
 
@@ -129,14 +123,14 @@ public class AccountDAOImpl implements AccountDAO{
 
 
     public void deleteAccount(int accountId){
-        ListIterator<Accounts> listIterator = accountsList.listIterator();
+        // ListIterator<Accounts> listIterator = accountsList.listIterator();
 
-        while(listIterator.hasNext()){
-            Accounts account1 = listIterator.next();
-            if(account1.getAccount_id() == accountId){
-                listIterator.remove();
-            }
-        }
+        // while(listIterator.hasNext()){
+        //     Accounts account1 = listIterator.next();
+        //     if(account1.getAccount_id() == accountId){
+        //         listIterator.remove();
+        //     }
+        // }
         // String sql="delete from accounts where account_id=?";
         // try(PreparedStatement pst=con.prepareStatement(sql))
         // {
@@ -192,5 +186,5 @@ public class AccountDAOImpl implements AccountDAO{
 //            e.printStackTrace();
 //        }
 //    }
->>>>>>> 8b7fdd6bb3e20280a92e6bcbce26f4bebc1c8b16
 }
+

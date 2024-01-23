@@ -5,8 +5,6 @@ public class Loan {
     private Long id;
     private String loanType;
     private double amount;
-<<<<<<< HEAD
-=======
     public Loan() {
     }
     public Loan(Long id, String loanType, double amount) {
@@ -39,6 +37,5 @@ public class Loan {
     
 
     
->>>>>>> 8b7fdd6bb3e20280a92e6bcbce26f4bebc1c8b16
 
 }

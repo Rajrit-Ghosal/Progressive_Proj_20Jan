@@ -1,10 +1,4 @@
 package com.wecp.progressive.entity;
-<<<<<<< HEAD
-
-public class Accounts {
-
-}
-=======
 import java.util.*;
 
 //import ch.qos.logback.core.joran.conditional.ElseAction;
@@ -68,4 +62,3 @@ public class Accounts implements Comparable<Accounts>{
 
 
 }
->>>>>>> 8b7fdd6bb3e20280a92e6bcbce26f4bebc1c8b16
